@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+</head>
+<body>
+<h1>HOMEPAGE</h1>
+    <p>Hello {{ content }} !</p>
+
+    {% for i in range(3) %}
+        <div>This is for loop running {{i+1}} times</div>
+    {% endfor %}
+
+    <br>
+    <div><b>Even numbers between 1 to 10:</b>
+        {% for x in range(11) %}
+            {% if x % 2 == 0 %}
+                {{ x }}
+            {% endif %}
+        {% endfor %}
+    </div><br>
+
+    <b><div>Name of my friends:</div></b>
+    {% for i in name_list %}
+        <div>{{ i }}</div>
+    {% endfor %}
+
+
+</body>
+</html>
